@@ -18,6 +18,12 @@ export function ensureDir(dirPath: string): void {
 /**
  * Write a generated file, creating directories as needed.
  * Returns true if the file was written, false if skipped.
+ *
+ * Atomicity: when `overwrite`/`force` is not set, the write uses the
+ * `wx` flag, which fails (EEXIST) if the path already exists. This
+ * fuses the "does it exist?" check with the write into a single
+ * filesystem syscall, closing CodeQL js/file-system-race — the
+ * previous existsSync+writeFileSync pair was a classic TOCTOU.
  */
 export function writeGeneratedFile(
   baseDir: string,
@@ -29,12 +35,16 @@ export function writeGeneratedFile(
 
   ensureDir(dir);
 
-  if (existsSync(fullPath) && !file.overwrite && !force) {
-    return false;
+  const flag = file.overwrite || force ? 'w' : 'wx';
+  try {
+    writeFileSync(fullPath, file.content, { encoding: 'utf-8', flag });
+    return true;
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === 'EEXIST') {
+      return false;
+    }
+    throw err;
   }
-
-  writeFileSync(fullPath, file.content, 'utf-8');
-  return true;
 }
 
 /**
