@@ -50,6 +50,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
       # Produce coverage/lcov.info for the scan below; test failures
       # don't block analysis (the gate is non-blocking observability).
       - name: Run tests with coverage
