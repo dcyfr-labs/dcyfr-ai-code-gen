@@ -8,7 +8,7 @@
   last_validated: 2026-03-29
 -->
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/dcyfr/dcyfr-ai-code-gen)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/dcyfr-labs/dcyfr-ai-code-gen)
 
 > AI-powered code generation toolkit with AST manipulation, template engine, and intelligent scaffolding.
 
