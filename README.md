@@ -5,18 +5,18 @@
   status: active
   name: dcyfr-ai-code-gen
   description: AI-powered code generation toolkit - template generators, AST manipulation, intelligent scaffolding, and AI-assisted refactoring
-  last_validated: 2026-03-29
+  last_validated: 2026-07-11
 -->
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/dcyfr-labs/dcyfr-ai-code-gen)
 
 > AI-powered code generation toolkit with AST manipulation, template engine, and intelligent scaffolding.
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.7+-blue.svg)](https://www.typescriptlang.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Node.js](https://img.shields.io/badge/Node.js-24+-green.svg)](https://nodejs.org/)
-[![Status](https://img.shields.io/badge/Status-Production%20Ready-success.svg)]()
-[![Sponsor](https://img.shields.io/badge/sponsor-30363D?style=flat-square&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/dcyfr)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0+-blue?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-20+-green?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
+![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=flat-square)
+[![Sponsor](https://img.shields.io/badge/sponsor-30363D?style=flat-square&logo=GitHub-Sponsors&logoColor=EA4AAA)](https://github.com/sponsors/dcyfr)
 
 ## About DCYFR
 
@@ -24,7 +24,6 @@
 
 - **DCYFR** is a registered trademark of DCYFR Labs.
 - Primary domain: [www.dcyfr.ai](https://www.dcyfr.ai)
-- Trademark guidance: [../TRADEMARK.md](../TRADEMARK.md)
 - Licensing details: [LICENSE](./LICENSE)
 
 ---
@@ -34,24 +33,27 @@
 ```bash
 # Install package
 npm install @dcyfr/ai-code-gen
+```
 
-# Generate React component
-import { createGeneratorRegistry } from '@dcyfr/ai-code-gen';
+```typescript
+// Generate a React component
+import { createGeneratorRegistry } from "@dcyfr/ai-code-gen";
+
 const registry = createGeneratorRegistry();
-await registry.run('component', { name: 'user-card' });
-# ✅ Component generated with tests
+await registry.run("component", { name: "user-card" });
+// ✅ Component generated with tests
 ```
 
 ---
 
 ## 🧭 Related Packages
 
-| Package                                | Purpose                | Type        |
-| -------------------------------------- | ---------------------- | ----------- |
-| [@dcyfr/ai](../dcyfr-ai)               | Core AI framework      | npm package |
-| [@dcyfr/ai-cli](../dcyfr-ai-cli)       | CLI tool               | npm package |
-| [@dcyfr/ai-agents](../dcyfr-ai-agents) | Autonomous agents      | Template    |
-| [dcyfr-labs](../dcyfr-labs)            | Production Next.js app | Application |
+| Package                                                           | Purpose                | Type        |
+| ------------------------------------------------------------------ | ---------------------- | ----------- |
+| [@dcyfr/ai](https://github.com/dcyfr-labs/dcyfr-ai)                 | Core AI framework      | npm package |
+| [@dcyfr/ai-cli](https://github.com/dcyfr-labs/dcyfr-ai-cli)         | CLI tool               | npm package |
+| [@dcyfr/ai-agents](https://github.com/dcyfr-labs/dcyfr-ai-agents)   | Autonomous agents      | Template    |
+| [dcyfr-labs](https://github.com/dcyfr-labs/dcyfr-labs)              | Production Next.js app | Application |
 
 ---
 
@@ -76,7 +78,7 @@ await registry.run('component', { name: 'user-card' });
 ✅ **CLI** — Command-line interface for scaffolding, analysis, and code review  
 ✅ **Extensible** — Register custom templates, generators, and AI providers  
 ✅ **Type-Safe** — Full TypeScript support with strict mode enabled  
-✅ **Well-Tested** — Comprehensive test suite with Vitest
+✅ **Well-Tested** — Comprehensive test suite run with `bun test`
 
 ## Installation
 
@@ -355,11 +357,18 @@ Comprehensive guides for mastering code generation:
 - **[AI Integration Guide](docs/AI_INTEGRATION.md)** (915 lines)  
   Integrate AI providers (OpenAI, Anthropic), prompt engineering, code review workflows, and custom AI providers.
 
-**Total: 3,894 lines of production-ready documentation**
+- **[API Reference](docs/API.md)**  
+  Public API documentation for the package's exports.
 
 ## Examples
 
 See [`examples/README.md`](examples/README.md) for a quick runbook and per-example type-check commands.
+
+The `examples/` directory contains three executable examples plus three documented walkthroughs:
+
+- [`ai-refactor/`](examples/ai-refactor/) — AI-assisted refactoring walkthrough
+- [`generate-crud/`](examples/generate-crud/) — CRUD generation walkthrough
+- [`scaffold-react-app/`](examples/scaffold-react-app/) — React app scaffolding walkthrough
 
 Three comprehensive executable examples showcasing advanced patterns:
 
@@ -484,7 +493,7 @@ TS2304: Cannot find name 'User'
 
 ### Getting Help
 
-- **GitHub Issues:** [https://github.com/dcyfr/dcyfr-ai-code-gen/issues](https://github.com/dcyfr/dcyfr-ai-code-gen/issues)
+- **GitHub Issues:** [https://github.com/dcyfr-labs/dcyfr-ai-code-gen/issues](https://github.com/dcyfr-labs/dcyfr-ai-code-gen/issues)
 - **Documentation:** See comprehensive guides in `docs/` directory
 - **Examples:** Run example files in `examples/` directory
 - **Community:** Join discussions on GitHub
@@ -529,6 +538,8 @@ We welcome contributions! Please see our [contributing guidelines](CONTRIBUTING.
 
 ## Roadmap
 
+_Status as of 2026-07-11: the items below are aspirational and not yet started; dates are targets, not commitments._
+
 ### v1.1 (Q2 2026)
 
 - [ ] Additional AI providers (Google Gemini, Mistral, local LLMs)
@@ -557,22 +568,28 @@ We welcome contributions! Please see our [contributing guidelines](CONTRIBUTING.
 npm install
 
 # Type check
-npx tsc --noEmit
+npm run typecheck
 
-# Run tests
+# Run tests (requires Bun — scripts run `bun test`)
 npm test
 
 # Run tests in watch mode
-npx vitest
+npm run test:watch
+
+# Coverage
+npm run test:coverage
 
 # Lint
 npm run lint
 ```
 
+> **Note:** the test scripts (`test`, `test:run`, `test:watch`, `test:coverage`) all invoke `bun test`, so [Bun](https://bun.sh/) must be installed to run the suite.
+
 ## Requirements
 
-- Node.js >= 24
-- TypeScript >= 5.3
+- Node.js >= 20
+- TypeScript >= 6.0
+- [Bun](https://bun.sh/) (test runner only)
 
 ## License
 
