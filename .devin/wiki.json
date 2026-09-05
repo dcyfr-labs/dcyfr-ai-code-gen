@@ -1,8 +1,47 @@
 {
   "repo_notes": [
     {
-      "content": "Code generation tools for the DCYFR AI framework. Document the code generation patterns, template system, AST manipulation, and integration with the core framework for automated code creation and refactoring.",
-      "author": "DCYFR Engineering"
+      "content": "Three distinct engines share one repo: template generation, AST rewriting and AI refactoring. Keep them on separate pages; they fail in different ways.",
+      "author": "rei-doc-specialist"
+    },
+    {
+      "content": "examples/ is unusually complete and is the fastest way to understand each engine.",
+      "author": "rei-doc-specialist"
+    }
+  ],
+  "pages": [
+    {
+      "title": "Toolkit Overview",
+      "purpose": "The three generation strategies this toolkit offers, when each is the right one, and how they are invoked from the CLI or as a library."
+    },
+    {
+      "title": "Generators",
+      "purpose": "The generator implementations under src/generators/: the generator interface, scaffolding a project, and writing a custom generator.",
+      "parent": "Toolkit Overview"
+    },
+    {
+      "title": "Templates",
+      "purpose": "The template engine under src/templates/: syntax, composition, and the variables a template may reference.",
+      "parent": "Generators"
+    },
+    {
+      "title": "AST Manipulation",
+      "purpose": "The AST layer under src/ast/: parsing, the transformation API, and how a rewrite is applied safely to existing source.",
+      "parent": "Toolkit Overview"
+    },
+    {
+      "title": "AI-assisted Refactoring",
+      "purpose": "The AI path under src/ai/: prompt construction, what is sent, how a proposed change is validated before it is written, and the human review point.",
+      "parent": "Toolkit Overview"
+    },
+    {
+      "title": "Examples",
+      "purpose": "The worked examples — CRUD generation, React scaffolding, AST refactoring, template composition, custom generators and AI refactor — and what each demonstrates.",
+      "parent": "Toolkit Overview"
+    },
+    {
+      "title": "Testing",
+      "purpose": "The Vitest suite under tests/unit and how generated output is asserted."
     }
   ]
 }
