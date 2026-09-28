@@ -56,8 +56,13 @@ export function readFileContents(filePath: string): string {
 
 /**
  * Check if a file exists.
+ *
+ * An empty path never exists. Node's `existsSync('')` already returns
+ * false, but this is stated explicitly so the contract doesn't depend on
+ * the fs backend (memfs >= 4.79 returns true for '').
  */
 export function fileExists(filePath: string): boolean {
+  if (!filePath) return false;
   return existsSync(filePath);
 }
 
@@ -68,7 +73,7 @@ export function listTypeScriptFiles(dirPath: string): string[] {
   const results: string[] = [];
 
   function walk(dir: string): void {
-    if (!existsSync(dir)) return;
+    if (!fileExists(dir)) return;
 
     const entries = readdirSync(dir);
 
