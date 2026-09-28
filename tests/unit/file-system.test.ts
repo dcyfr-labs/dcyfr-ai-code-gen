@@ -344,6 +344,14 @@ describe('File System Utilities', () => {
       expect(files).toEqual([]);
     });
 
+    it('should return empty array for empty string path', () => {
+      vol.fromJSON({
+        '/project/src/index.ts': 'export {}',
+      });
+
+      expect(listTypeScriptFiles('')).toEqual([]);
+    });
+
     it('should ignore non-TypeScript files', () => {
       vol.fromJSON({
         '/project/src/index.ts': 'export {}',
