@@ -8,6 +8,17 @@ updates:
       time: "04:00"
       timezone: "UTC"
     open-pull-requests-limit: 10
+
+    # vitest and @vitest/* must move in lockstep: @vitest/coverage-v8 pins
+    # an exact `vitest` peer and refuses to run against a different version.
+    # Ungrouped, Dependabot opens one PR per package and each fails alone;
+    # that deadlocked vitest 5.0.1 in dcyfr-ai-docker and dcyfr-ai-kubernetes.
+    # Tests here run under `bun test`, so today only @vitest/coverage-v8
+    # matches; the group keeps the pair together if vitest is ever added.
+    groups:
+      vitest:
+        patterns: ["vitest", "@vitest/*"]
+
     labels:
       - "dependencies"
       - "automated"
