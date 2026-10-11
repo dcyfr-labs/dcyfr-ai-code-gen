@@ -781,9 +781,9 @@ generateFeature();
 
 ## Support
 
-- **Documentation:** https://github.com/dcyfr/dcyfr-ai-code-gen#readme
-- **Issues:** https://github.com/dcyfr/dcyfr-ai-code-gen/issues
-- **Changelog:** https://github.com/dcyfr/dcyfr-ai-code-gen/blob/main/CHANGELOG.md
+- **Documentation:** https://github.com/dcyfr-labs/dcyfr-ai-code-gen#readme
+- **Issues:** https://github.com/dcyfr-labs/dcyfr-ai-code-gen/issues
+- **Changelog:** https://github.com/dcyfr-labs/dcyfr-ai-code-gen/blob/main/CHANGELOG.md
 - **Security:** See [SECURITY.md](../SECURITY.md)
 
 ---

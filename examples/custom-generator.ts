@@ -441,7 +441,7 @@ function generateBarrelExport(name: string, options: { useValidation: boolean; t
 function addLicenseHeader(content: string): string {
   const year = new Date().getFullYear();
   const header = `/**
- * Copyright (c) ${year} DCYFR. All rights reserved.
+ * Copyright (c) ${year} DCYFR Labs. All rights reserved.
  * This code is licensed under the MIT License.
  */
 

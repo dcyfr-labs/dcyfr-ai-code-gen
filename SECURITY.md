@@ -33,7 +33,7 @@ We take security seriously and appreciate responsible disclosure. If you discove
 
 ### 🔒 GitHub Security Advisories
 Use GitHub's private vulnerability reporting:
-https://github.com/dcyfr/dcyfr-ai-code-gen/security/advisories/new
+https://github.com/dcyfr-labs/dcyfr-ai-code-gen/security/advisories/new
 
 ---
 
@@ -115,7 +115,7 @@ Subscribe to security notifications:
 
 - **GitHub Watch:** Click "Watch" → "Custom" → "Security alerts only"
 - **npm Advisory:** https://www.npmjs.com/package/@dcyfr/ai-code-gen
-- **RSS Feed:** https://github.com/dcyfr/dcyfr-ai-code-gen/security/advisories.atom
+- **RSS Feed:** https://github.com/dcyfr-labs/dcyfr-ai-code-gen/security/advisories.atom
 
 ---
 
@@ -172,6 +172,6 @@ We maintain a Security Hall of Fame for responsible disclosure (with permission)
 
 - [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
 - [npm Security Best Practices](https://docs.npmjs.com/packages-and-modules/securing-your-code)
-- [DCYFR Security Policy](https://github.com/dcyfr/.github/blob/main/SECURITY.md)
+- [DCYFR Security Policy](https://github.com/dcyfr-labs/.github/blob/main/SECURITY.md)
 
 Thank you for helping keep `@dcyfr/ai-code-gen` and the DCYFR ecosystem secure! 🔒
