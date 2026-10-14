@@ -2,6 +2,10 @@
 
 Thank you for your interest in contributing to `@dcyfr/ai-code-gen`!
 
+## Code of Conduct
+
+This project follows the DCYFR Labs [Code of Conduct](https://github.com/dcyfr-labs/.github/blob/main/CODE_OF_CONDUCT.md).
+
 ## Licensing & Contributions
 
 By contributing to `@dcyfr/ai-code-gen`, you agree that:

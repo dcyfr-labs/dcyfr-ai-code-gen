@@ -53,7 +53,7 @@ await registry.run("component", { name: "user-card" });
 | [@dcyfr/ai](https://github.com/dcyfr-labs/dcyfr-ai)                 | Core AI framework      | npm package |
 | [@dcyfr/ai-cli](https://github.com/dcyfr-labs/dcyfr-ai-cli)         | CLI tool               | npm package |
 | [@dcyfr/ai-agents](https://github.com/dcyfr-labs/dcyfr-ai-agents)   | Autonomous agents      | Template    |
-| [dcyfr-labs](https://github.com/dcyfr-labs/dcyfr-labs)              | Production Next.js app | Application |
+| [dcyfr.ai](https://www.dcyfr.ai)              | DCYFR Labs website | Website     |
 
 ---
 
