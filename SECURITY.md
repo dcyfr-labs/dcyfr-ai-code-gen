@@ -157,7 +157,7 @@ We maintain a Security Hall of Fame for responsible disclosure (with permission)
 ## Contact
 
 **General Security:** security@dcyfr.ai  
-**Package Maintainer:** @dcyfr-team  
+**Private Reporting:** [GitHub Security Advisories](https://github.com/dcyfr-labs/dcyfr-ai-code-gen/security/advisories/new)  
 **Emergency Contact:** For critical vulnerabilities affecting production systems, include "URGENT" in subject line
 
 ---
