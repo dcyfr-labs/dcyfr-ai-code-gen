@@ -150,7 +150,7 @@ We maintain a Security Hall of Fame for responsible disclosure (with permission)
 
 | Date | Type | Auditor | Results |
 |------|------|---------|---------|
-| TBD | Internal | DCYFR Security Team | Pending v1.0.0 release |
+| TBD | Internal | DCYFR Labs Security Team | Pending v1.0.0 release |
 
 ---
 
