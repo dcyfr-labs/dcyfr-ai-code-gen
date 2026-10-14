@@ -791,7 +791,7 @@ generateFeature();
 **API Reference Version:** 1.0.0  
 **Package Version:** ^1.0.0  
 **Last Updated:** February 7, 2026  
-**Maintained By:** DCYFR Team
+**Maintained By:** DCYFR Labs
 
 ---
 
