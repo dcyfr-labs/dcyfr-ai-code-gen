@@ -345,6 +345,9 @@ const result = engine.render("my-template", { name: "my-service" });
 
 Comprehensive guides for mastering code generation:
 
+- **[Docs index](docs/README.md)**  
+  All documentation by topic.
+
 - **[Template Engine Guide](docs/TEMPLATE_ENGINE.md)** (1,054 lines)  
   Learn Handlebars templating with 20+ custom helpers, partials, custom helpers, and advanced patterns for code generation.
 
