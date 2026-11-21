@@ -2,11 +2,11 @@
   "repo_notes": [
     {
       "content": "Three distinct engines share one repo: template generation, AST rewriting and AI refactoring. Keep them on separate pages; they fail in different ways.",
-      "author": "rei-doc-specialist"
+      "author": "dcyfr-doc-specialist"
     },
     {
       "content": "examples/ is unusually complete and is the fastest way to understand each engine.",
-      "author": "rei-doc-specialist"
+      "author": "dcyfr-doc-specialist"
     }
   ],
   "pages": [
